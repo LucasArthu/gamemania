@@ -1,0 +1,45 @@
+
+.container-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+
+.form-login {
+    padding: 50px;
+    border-radius: 20px;
+    height: 70%;
+    width: 40%;
+    background-color: white;
+    border-style: double;
+}
+
+.form-login .linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-login .linha label {
+    margin-bottom: 5px;
+    font-family: "roboto-light";
+    color: black;
+    text-transform:none;
+}
+
+.form-login .linha input {
+    font-family: "roboto-light";
+    border-radius: 10px;
+    padding: 20px;
+    height: 40px;
+}
+
+.form-login .btn-actions {
+    display: flex;
+}
+
+.form-login .btn-actions button {
+    width:100%;
+}
+

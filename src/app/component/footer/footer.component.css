@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    min-height: 250px;
+    background-color: #282736;
+    display: flex;
+}
+
+footer .fim {
+    width: 320px;
+    min-height: 150px;
+    padding: 20px;
+}
+
+footer .faq {
+    width: 100px;
+    padding: 10px;
+}
+
+footer .h2h2 {
+    color: aliceblue;
+    padding: 30px;
+}
+
+.fim ul li {
+    margin-bottom: 100px 0px;
+    list-style: none;
+    color: aliceblue;
+}
+
+.fim ul li a {
+    color: aliceblue;
+}
