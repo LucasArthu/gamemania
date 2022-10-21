@@ -1,4 +1,6 @@
-<div class="container container-p">
+<body>
+
+    <div class="container container-p">
     <form action="" class="form-login" (ngSubmit)="receberDados()"> 
         <div class="linha">
             <label for="">Login</label>
@@ -7,12 +9,18 @@
 
         <div class="linha">
             <label for="">Senha</label>
-            <input type="password" id="Senha" placeholder="" [(ngModel)]="userModel.password" name="password">
+            <input type="password" id="Senha" placeholder="***" [(ngModel)]="userModel.password" name= "password ">
         </div>
 
         <div class="linha btn-actions">
-            <button type="submit" class="btn btn-light" (click)="receberDados">SignIn</button>
+            <button type="submit" class="btn btn-light" (click)="receberDados">Sign In</button>
             <button type="button" class="btn btn-light">Register</button>
+        </div>
+
+        <div class="linha">
+            <p>
+                {{mensagem}}
+            </p>
         </div>
 
         <div class="linha">
@@ -26,3 +34,4 @@
     </form>
 
 </div>
+</body>
