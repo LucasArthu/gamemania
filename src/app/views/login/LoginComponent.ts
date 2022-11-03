@@ -20,8 +20,22 @@ export class LoginComponent implements OnInit {
   mensagem = ""
 
   receberDados() {
-    console.log(this.userModel);
+    //console.log(this.userModel);
 
+    const blackList = ["SELECT", "OR", ' ""="" ', "-- ", ";", "1 = 1", "1=1", "DROP", "\"\"=\"\"", "'='"];
+    let ataque = 0;
+
+    blackList.forEach( (palavra) => {
+      if(this.userModel.email?.toUpperCase().includes(palavra)) {//encontrou sql injection
+        ataque++;
+      }
+  } );
+
+    if (this.userModel.email == "" || this.userModel.password == "" || ataque > 0) {//campos vazios ou está sob ataque
+    this.mensagem = "Preencher os campos corretamente";
+    } else {// pode se logar
+
+    //disparando/send
     this.userService.LogarUsuario(this.userModel).subscribe({
       next: (response) => {
 
@@ -39,7 +53,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  carro = function name(params:string) {
+
     
   }
 
